@@ -1,7 +1,7 @@
 def reverse_each_word(string)
   phrase_array = string.split(/ /)
-  phrase_array.each do |word|
-    reverse_string << word.reverse
+  phrase_array.each_with_index do |word, index|
+    phrase_array[index] = word.reverse
   end
-  reverse_string
+  phrase_array.join
 end
